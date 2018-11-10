@@ -16,13 +16,16 @@ def handle_updates(updates):
             chat = update["message"]["chat"]["id"]
             items = db.get_items()
             if text in items:
-                send_message("Verno", chat)
-               #db.delete_item(text)
-              #  items = db.get_items()
+                #send_message("Verno", chat)
+                db.delete_item(text)
+                items = db.get_items()
             else:
-                send_message("Не верно", chat)
-            #    db.add_item(text)
-             #   items = db.get_items()
+            #    send_message("Не верно", chat)
+                db.add_item(text)
+                items = db.get_items()
+
+            message = "\n".join(items)
+            send_message(message, chat)
 
         except KeyError:
             pass

@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="09e5f056-c97f-4a29-9235-533feca6c93d" name="Default Changelist" comment="" />
+    <list default="true" id="09e5f056-c97f-4a29-9235-533feca6c93d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataBaseHelper.py" beforeDir="false" afterPath="$PROJECT_DIR$/DataBaseHelper.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/todo,sqlite" beforeDir="false" afterPath="$PROJECT_DIR$/todo,sqlite" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -12,9 +17,10 @@
     <session id="-457316365">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.3" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.opened" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -29,40 +35,27 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="2469" />
+          <entry key="py" value="2689" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="2469" />
+          <entry key="Python" value="2689" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-48">
-              <caret line="25" selection-start-line="25" selection-end-line="25" />
+            <state relative-caret-position="450">
+              <caret line="27" column="12" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
-                <element signature="e#514#535#0" />
-                <element signature="e#606#628#0" />
-                <element signature="e#177#270#0" />
-                <element signature="e#304#369#0" />
-                <element signature="e#666#788#0" />
-                <element signature="e#508#723#0" />
-                <marker date="1541775752087" expanded="true" signature="247:764" ph="..." />
-                <marker date="1541775752087" expanded="true" signature="790:1036" ph="..." />
-                <marker date="1541775752087" expanded="true" signature="1181:1185" ph="..." />
-                <marker date="1541775752087" expanded="true" signature="1284:1423" ph="..." />
-                <marker date="1541775752087" expanded="true" signature="1452:1457" ph="..." />
-                <marker date="1541775752087" expanded="true" signature="1634:1639" ph="..." />
-                <marker date="1541775752087" expanded="true" signature="1901:1906" ph="..." />
-                <marker date="1541775752087" expanded="true" signature="2030:2033" ph="..." />
+                <marker date="1541885834898" expanded="true" signature="247:843" ph="..." />
               </folding>
             </state>
           </provider>
@@ -71,10 +64,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DataBaseHelper.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
+            <state relative-caret-position="275">
+              <caret line="11" selection-start-line="11" selection-end-line="11" />
               <folding>
-                <marker date="1541773717016" expanded="true" signature="32:37" ph="..." />
+                <marker date="1541885339402" expanded="true" signature="32:37" ph="..." />
               </folding>
             </state>
           </provider>
@@ -89,6 +82,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Main.py" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -101,9 +97,9 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="width" value="977" />
-    <option name="height" value="1038" />
+    <option name="x" value="-9" />
+    <option name="width" value="978" />
+    <option name="height" value="1039" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -119,6 +115,7 @@
       </profile-state>
     </entry>
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -198,13 +195,9 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12227363" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Python Console" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" weight="0.3295129" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32624114" />
@@ -212,6 +205,10 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.3295129" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -223,34 +220,21 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/DataBaseHelper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="9" column="39" selection-start-line="9" selection-start-column="39" selection-end-line="9" selection-end-column="39" />
+        <state relative-caret-position="275">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
           <folding>
-            <marker date="1541773717016" expanded="true" signature="32:37" ph="..." />
+            <marker date="1541885339402" expanded="true" signature="32:37" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-48">
-          <caret line="25" selection-start-line="25" selection-end-line="25" />
+        <state relative-caret-position="450">
+          <caret line="27" column="12" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
-            <element signature="e#514#535#0" />
-            <element signature="e#606#628#0" />
-            <element signature="e#177#270#0" />
-            <element signature="e#304#369#0" />
-            <element signature="e#666#788#0" />
-            <element signature="e#508#723#0" />
-            <marker date="1541775752087" expanded="true" signature="247:764" ph="..." />
-            <marker date="1541775752087" expanded="true" signature="790:1036" ph="..." />
-            <marker date="1541775752087" expanded="true" signature="1181:1185" ph="..." />
-            <marker date="1541775752087" expanded="true" signature="1284:1423" ph="..." />
-            <marker date="1541775752087" expanded="true" signature="1452:1457" ph="..." />
-            <marker date="1541775752087" expanded="true" signature="1634:1639" ph="..." />
-            <marker date="1541775752087" expanded="true" signature="1901:1906" ph="..." />
-            <marker date="1541775752087" expanded="true" signature="2030:2033" ph="..." />
+            <marker date="1541885834898" expanded="true" signature="247:843" ph="..." />
           </folding>
         </state>
       </provider>

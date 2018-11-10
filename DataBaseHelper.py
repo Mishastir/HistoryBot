@@ -2,7 +2,7 @@ import sqlite3
 
 
 class DBHelper:
-    def __init__(self, dbname = "todo,sqlite"):
+    def __init__(self, dbname="todo,sqlite"):
         self.dbbame = dbname
         self.conn = sqlite3.connect(dbname)
 
@@ -14,7 +14,7 @@ class DBHelper:
     def add_item(self, item_text):
         stmt = "INSERT INTO items (description) VALUES (?)"
         args = (item_text, )
-        self.conn.execute(stmt,args)
+        self.conn.execute(stmt, args)
         self.conn.commit()
 
     def delete_item(self, item_text):
