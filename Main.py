@@ -3,11 +3,17 @@ import json
 import time
 import urllib
 from DataBaseHelper import DBHelper
-
+from Quest import Quests
 db = DBHelper()
+quest = Quests()
 
 TOKEN = "723144612:AAGoGsa9kKUKZNPzdT9DdQr9HeTqAhTKg4A"
 URL = "https://api.telegram.org/bot{}/".format(TOKEN)
+
+def build_keyboard(items):
+    keyboard = [["Так"], ["Ні"]]
+    reply_markup = {"keyboard": keyboard, "one_time_keyboard": True}
+    return json.dumps(reply_markup)
 
 def handle_updates(updates):
     for update in updates["result"]:
@@ -15,18 +21,20 @@ def handle_updates(updates):
             text = update["message"]["text"]
             chat = update["message"]["chat"]["id"]
             items = db.get_items()
-            if text in items:
-                #send_message("Verno", chat)
-                db.delete_item(text)
-                items = db.get_items()
-            else:
-            #    send_message("Не верно", chat)
-                db.add_item(text)
-                items = db.get_items()
-
-            message = "\n".join(items)
-            send_message(message, chat)
-
+            if text == "/startquest":
+                send_message(list(items)[0], chat)
+                quest.started = True
+            if (text[0] != '/' or text == "/endquest") and quest.started:
+                result = quest.main(items, text)
+                if result != 0:
+                    send_message(result, chat)
+                    next_question = quest.next_question(items, text)
+                    if next_question != 0 and quest.started and quest.go_forward:
+                        time.sleep(3)
+                        send_message(next_question, chat)
+                else:
+                    keyboard = build_keyboard(items)
+                    send_message("Ваша відповідь 3й раз підряд не вірна, може вам потрібна підказка?", chat, keyboard)
         except KeyError:
             pass
 
@@ -38,7 +46,7 @@ def main():
         if len(updates["result"]) > 0:
             last_update_id = get_last_update_id(updates)+1
             handle_updates(updates)
-        time.sleep(2)
+        time.sleep(1)
 
 def get_url(url):
     response = requests.get(url)
@@ -70,9 +78,11 @@ def get_last_chat_id_and_text(updates):
     chat_id = updates["result"][last_update]["message"]["chat"]["id"]
     return (text, chat_id)
 
-def send_message(text, chat_id):
+def send_message(text, chat_id, reply_markup=None):
     text = urllib.parse.quote_plus(text)
-    url = URL + "sendMessage?text={}&chat_id={}".format(text,chat_id)
+    url = URL + "sendMessage?text={}&chat_id={}&parse_mode=Markdown".format(text, chat_id)
+    if reply_markup:
+        url += "&reply_markup={}".format(reply_markup)
     get_url(url)
 
 
@@ -80,5 +90,5 @@ def send_message(text, chat_id):
 if __name__ == '__main__':
     main()
 
-text,chat = get_last_chat_id_and_text(get_updates())
-send_message(text,chat)
+text, chat = get_last_chat_id_and_text(get_updates())
+send_message(text, chat)
